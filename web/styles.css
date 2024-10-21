@@ -1,0 +1,223 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Styles */
+nav {
+    background: linear-gradient(to right, #2c5354, #e6c317); /* Use background instead of background-color */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif; /* Use the chosen Google Font */
+    font-weight: 100; /* Thin font */
+    font-size: 24px; /* Adjust the size as needed */
+    color: #ffff; /* Set your desired text color */
+    text-align: center; /* Center the text if needed */
+    margin-bottom: 20px;
+}
+
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Main Content Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px;
+    background:  #0c1a30;
+    color: white;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    animation: slideInDown 1s ease-out;
+}
+
+
+
+.login-button {
+    padding: 12px 40px;
+    background-color: #e6c317;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.login-button:hover {
+    background-color: #ff4500;
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+nav {
+    background: linear-gradient(to right, #f7674a, #e6c317); /* Use your desired colors */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left a {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: -250px;
+        width: 200px;
+        height: 100vh;
+        background-color: #333;
+        transition: right 0.3s ease;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 24px;
+    }
+
+    nav ul.open {
+        right: 0;
+    }
+
+    nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 28px;
+    }
+}
+*/
+/* Animation Keyframes */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+    }
+    100% {
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+/* Apply animation to the logo */
+.center-logo {
+    max-width: 200px; /* Adjust the size of the logo */
+    margin-top: 5px; /* Reduced gap */
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 4s ease forwards; /* 1 second duration, ease timing */
+}
+
+
+/* Hide Menu Toggle Button on Desktop */
+nav .menu-toggle {
+    display: none;
+}
